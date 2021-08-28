@@ -3,6 +3,9 @@ const router = require('express').Router();
 const path = require('path');
  // gets all notes=db.json
 const notes  = require('../db/db');
+console.log(typeof notes);
+console.log(notes);
+const fs = require('fs');
 
 // route for notes.html
 router.get('/notes', (req,res) => {
@@ -20,7 +23,25 @@ router.get('/api/notes', (req,res) => {
 });
 
 router.post('/api/notes', (req,res) => {
+    const newNote = req.body;
+    console.log(newNote);  // currently reading newNote as undefined
+    notes.push(newNote);
     res.json(notes)
+});
+
+//make ds.json a string
+fs.writeFile("./db/db.json", JSON.stringify(notes), (err) => {
+    if (err) {
+        return console.log(err);
+    }
+    console.log('File Saved!');
+});
+
+fs.readFile("./db/db.json", "utf8", (err,log) => {
+    if (err) {
+        return console.log(err);
+    }
+    console.log(log);
 });
 
 module.exports = router;
