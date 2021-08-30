@@ -29,8 +29,9 @@ router.post('/api/notes', (req,res) => {
     res.json(notes)
 });
 
+
 //make ds.json a string
-fs.writeFile("./db/db.json", JSON.stringify(notes), (err) => {
+fs.writeFileSync("./db/db.json", JSON.stringify(notes), (err) => {
     if (err) {
         return console.log(err);
     }

@@ -5,8 +5,8 @@ const PORT = process.env.PORT || 3001;
 const fs = require('fs');
 const allRoutes = require('./routes/routes')
 
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static("public"));
 // use allRoutes
 app.use('/', allRoutes);
