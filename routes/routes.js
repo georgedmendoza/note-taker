@@ -17,7 +17,7 @@ router.get('/api/notes', (req,res) => {
 router.post('/api/notes', (req,res) => {
     const newNote = req.body;
     newNote.id = uniqid();
-    console.log('newNote ', newNote); 
+    console.log('newNote: ', newNote); 
     notes.push(newNote);
     writeFile();
     res.json(notes)
@@ -54,7 +54,7 @@ const readFile = () => {
             return console.log(err);
         }
         notes = JSON.parse(noteData);
-        console.log('Read File function ', noteData);
+        console.log(noteData);
     });
 };
 
