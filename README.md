@@ -5,8 +5,6 @@
 
   This application can be found at the following link.
 
-  REPLACE THE LINK BELOW!!!
-
   https://cryptic-lowlands-80543.herokuapp.com
   
 
@@ -29,6 +27,8 @@
     - "npm -v" to see current version on node
   - Install express
     - via "npm init -y"
+  - Install uniqid
+    via "npm install uniqid"
   - Use any compatible text editor
   - Clone or fork this repository to desired workstation
 
