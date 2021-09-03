@@ -1,4 +1,4 @@
-# Note Taker Starter Code
+# Note Taker
   
   ## Description 
   This webpage generates a note taker application and allows user to write, save, and delete notes. This was webpage was created using html, css, and JavaScript for the front end. While express.js and node.js for the backend. Heroku was also used to create a live version for this application for users to enjoy. For future development an editing option will be beneficial in case users decide to edit their notes.
